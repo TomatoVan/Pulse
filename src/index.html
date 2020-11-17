@@ -104,6 +104,15 @@
                 Просто заполните форму заявки<br>
                 и мы перезвоним вам в течении 10 минут
             </div>
+            <form class="feed-form" action="#">
+                <input name="name" required placeholder="Ваше имя"  type="text"> <!-- Всегда нужен нейм!!Чтобы потом различать например в php.Могут повторяться,если в разных формах --> 
+                <input name="phone" required placeholder="Ваш телефон"  type="number">
+                <input name="email" required placeholder="Ваше E-mail"  type="email">
+                <!-- <input type="submit" value="заказать консультацию"> --> <!-- Если использовать тут button,то у него автоматически будет тип submit,поэтому она удобнее -->
+                <!-- <textarea style="resize:none " name="" cols="30" rows="10"></textarea> --> <!-- Поле для ввода. Имя,айди,колонки,строки.Ресайз всегда нужен,чтоюы нельзя было её увеличить на сайте.  -->
+                <button class="button button_submit">заказать консультацию</button>
+                <!-- <input type="reset"> --> <!-- для сброса введённых данных -->
+            </form>
         </div>
     </section>
 

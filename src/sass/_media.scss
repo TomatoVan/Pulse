@@ -19,6 +19,35 @@
             width: 230px;
         }
     }
+    .adv{
+        &__wrapper{
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+        }
+        &__icon{
+            margin-bottom: 10px;
+        }
+    }
+    .consultation{
+        .title{
+            &_left{
+                font-size: 26px;
+                text-align: center;
+            }
+        }
+        &__descr{
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .feed-form{
+            display:flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+    }
 }
 
 @media (max-width:575px){
@@ -58,6 +87,30 @@
         }
         
     }
-   
+    .adv{
+        .title{
+            font-size: 26px;
+        }
+    }
+    .consultation{
+        .title{
+            &_left{
+                font-size: 14px;
+               
+            }
+        }
+        &__descr{
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .feed-form{
+            display:flex;
+            flex-direction: column;
+            margin: 0 auto;
+            width:250px;
+            height: 200px;
+        }
+    }
 
 }
