@@ -11,13 +11,13 @@ $(document).ready(function(){
         cssEase: 'linear'
       } */
       {
-        speed: 1200,
+        speed: 900,
         adaptiveHeight: true,
-        prevArrow: '<button type="button" class="slick-prev"><img src="../icons/arrow_left.png"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="../icons/arrow_right.png"></button>',
+        prevArrow: '<button type="button" class="slick-prev"><img src="icons/arrow_left.png"></button>', /* пишем путь не выходя из Js,т.к. уже находимся в самой src */
+        nextArrow: '<button type="button" class="slick-next"><img src="icons/arrow_right.png"></button>',
         responsive: [
             {
-                breakpoint: 992, /* адаптация для планшетов */
+                breakpoint:992, /* адаптация для планшетов */
                 settings: {
                     dots: true,
                     arrows:false
