@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.carousel__inner').slick(
+    $('.carousel__inner').slick({
         /* {
          infinite: true,
         slidesToShow: 3,
@@ -10,7 +10,7 @@ $(document).ready(function(){
         fade: true,
         cssEase: 'linear'
       } */
-      {
+    
         speed: 900,
         adaptiveHeight: true,
         prevArrow: '<button type="button" class="slick-prev"><img src="icons/arrow_left.png"></button>', /* пишем путь не выходя из Js,т.к. уже находимся в самой src */
@@ -24,6 +24,12 @@ $(document).ready(function(){
                 }
             }
         ]
-      }
-      );
+    });
+
+    $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
+        $(this)
+          .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
+          .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
+    });
+
 });

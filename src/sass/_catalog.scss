@@ -38,5 +38,138 @@
     }
     &__content{
         margin-top: 60px;
+        display: none;
+        justify-content: space-between;
+        flex-wrap: wrap; /* чтобы шли на новую строку,если не помещаются */
+        &_active{
+            display:flex;
+        }
+    }
+    &-item{
+        padding: 20px 20px 26px 20px;
+        width: 300px;
+        min-height: 440px; /* любая картинка будет потстраиваться под наши параметры */
+        border: 2px solid #e8e8e8;
+        overflow: hidden; /* чтобы 1 из блоков был невидимый */
+        margin-bottom: 20px;
+        &__img{
+            display:block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: 140px;
+        }
+        &__subtitle{
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #0d0d0d;
+            text-align: center;
+        }
+        &__descr{
+            margin-top: 16px;
+            font-size: 14px;
+            font-weight: 300;
+            color: #0d0d0d;
+            text-align: center;
+        }
+        &__link{
+            display: block;
+            margin-top: 17px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: underline;
+            color: $main-color;
+            text-align: center;
+            text-transform: uppercase;
+            &:hover{
+                color:$main-color;
+            }
+        }
+        hr{
+            margin-top: 19px;
+            margin-bottom: 21px;
+            background-color: #e8e8e8;
+            border-bottom: none;
+        }
+        &__footer{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__old-price{
+            font-size: 14px;
+            font-weight: 300;
+            color: #555555;
+            text-decoration: line-through;
+        }
+        &__price{
+            font-size: 20px;
+            font-weight: 700;
+            color: #050505;
+        }
+        &__wrapper{
+            display:flex;
+            width:calc(200% + 40px); /* чтобы ровно встали наши 2 элемента */
+        }
+        &__content{ /* Товар */
+            width:50%;
+            margin-right: 0px;
+            transform: translateX(-100%);
+            transition: 0.5s all;
+            &_active{
+                transform: translateX(0%);
+                margin-right: 20px;
+            }
+        }
+        &__list{ /* В "подробнее" */
+            position: relative;
+            width:50%;
+            margin-left: 20px;
+            transform: translateX(0%);
+            padding-right: 20px;
+            transition: 0.5s all;
+            padding-left: 19px;
+            margin-bottom: 0;
+            list-style-type: none; /* чтобы не было никаких модификаторов */
+            &_active{
+                transform: translateX(-100%);
+                margin-left: 0px;
+            }
+            li{
+                position: relative;
+                font-size: 14px;
+                font-weight: 300;
+                color: #555555;
+                margin-bottom: 20px;
+                &:before{
+                    content:'';
+                    position: absolute;
+                    width:5px;
+                    height: 5px;
+                    background-color: $main-color;
+                    left: -14px;
+                    top: 8;
+                }
+            }
+
+        }
+        &__back{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(calc(-50% - 19px)); /* чтобы надпись встала ровно пл центру */
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: underline;
+            color: #c70101;
+            text-transform: uppercase; /* Чтобы любой текст был в верхнем регистре */
+            &:hover{
+                color:$main-color;
+            }
+        }
     }
 }
+
+
+   
