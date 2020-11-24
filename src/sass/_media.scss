@@ -10,8 +10,49 @@
 }
 
 @media (max-width:991px){
-
-}
+    .carousel {
+        &__inner{
+            width:700px;
+            img{
+                
+                max-width:70%;
+                height:auto;
+                margin: 0 auto;
+            }
+            .slick-dots{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .slick-dots li{
+                list-style: none;
+                margin:0px 10px;
+            }
+            .slick-dots button {
+                font-size: 0;
+                width: 15px;
+                height: 15px;
+                background-color: #4f4f4f;
+                border-radius: 50%;  
+            }
+            .slick-dots li.slick-active button{
+                background-color:$main-color;            
+           }
+        }
+    } 
+    .catalog{
+        &__content{
+            margin-top: 60px;
+            display: none;
+            justify-content: center;
+            flex-wrap: wrap;
+            &_active{
+                display:flex;
+            }
+    
+        }
+    }             
+}   
 
 @media (max-width:767px){
     .header{
@@ -48,9 +89,28 @@
             margin: 0 auto;
         }
     }
+    .carousel {
+        &__inner{  
+        width:300px;
+            img{
+                
+                max-width:100%;
+                height:auto;
+                margin: 0 auto;
+            }
+        }
+    }
+    .catalog{
+        &__tabs{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        }
+    }
 }
 
-@media (max-width:575px){
+@media (max-width:575px) {
     .header{
         &__logo{
             img{
@@ -113,4 +173,19 @@
         }
     }
 
+    .catalog{
+        .title{
+            font-size: 24px;
+        }
+        &__tabs{
+            margin-top: 20px;
+            padding: 0px 60px;
+        }
+        &__tab:nth-child(2){
+            transform: skewX(25deg);
+            div{
+                transform: skewX(-25deg);
+            }
+        }
+    }
 }

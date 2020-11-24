@@ -10,7 +10,7 @@ $(document).ready(function(){
         fade: true,
         cssEase: 'linear'
       } */
-    
+      
         speed: 900,
         adaptiveHeight: true,
         prevArrow: '<button type="button" class="slick-prev"><img src="icons/arrow_left.png"></button>', /* пишем путь не выходя из Js,т.к. уже находимся в самой src */
@@ -20,7 +20,9 @@ $(document).ready(function(){
                 breakpoint:992, /* адаптация для планшетов */
                 settings: {
                     dots: true,
-                    arrows:false
+                    arrows:false,
+                    
+                    
                 }
             }
         ]
@@ -32,4 +34,38 @@ $(document).ready(function(){
           .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
     });
 
+    function toggleSlide(item){
+        $(item).each(function(i) {
+            $(this).on('click',function(e) {
+                e.preventDefault(); /* чтобы на ссылке мы не переходили по новому адресу а выполняли наш скрипт */
+                $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active'); /* автоматическое убирание класса актив */
+                $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');/* eq помогает получать элемент по определенному индексу */
+            })
+        })
+    }
+
+    toggleSlide('.catalog-item__link');
+    toggleSlide('.catalog-item__back');
 });
+
+
+
+   // Не оптимизированная версия
+   
+
+ //   $('.catalog-item__link').each(function(i) {
+   //     $(this).on('click',function(e) {
+     //       e.preventDefault(); /* чтобы на ссылке мы не переходили по новому адресу а выполняли наш скрипт */
+       //     $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active'); /* автоматическое убирание класса актив */
+         //   $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');/* eq помогает получать элемент по определенному индексу */
+       // })
+    //})
+
+    //$('.catalog-item__back').each(function(i) {
+      //  $(this).on('click',function(e) {
+        //    e.preventDefault(); /* чтобы на ссылке мы не переходили по новому адресу а выполняли наш скрипт */
+          //  $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active'); /* автоматическое убирание класса актив */
+            //$('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');/* eq помогает получать элемент по определенному индексу */
+        //})
+    //})
+
