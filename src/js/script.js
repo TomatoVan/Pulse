@@ -46,11 +46,9 @@ $(document).ready(function(){
 
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
-});
 
 
-
-   // Не оптимизированная версия
+  // Не оптимизированная версия
    
 
  //   $('.catalog-item__link').each(function(i) {
@@ -69,3 +67,49 @@ $(document).ready(function(){
         //})
     //})
 
+
+    //MODAL
+
+    $('[data-modal=consultation]').on('click',function(){
+      $('.overlay, #consultation').fadeIn();
+    });
+
+    $('.modal__close').on('click',function(){
+      $('.overlay,#consultation, #thanks, #order').fadeOut('slow');
+    });
+    
+    $('.button_mini').each(function(i){
+      $(this).on('click',function(){
+        $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+        $('.overlay, #order').fadeIn();
+      })
+    });
+    
+    function validateForms(form){
+      $(form).validate({
+        rules: {
+          name:"required",
+          phone:"required",
+          email: {
+            required:true,
+            email:true
+          }
+        },
+        messages: {
+          name: "Пожалуйства,введите своё имя",
+          phone:"Пожалуйства,введите свой номер телефона",
+          email: {
+            required: "Пожалуйства,введите свою почту",
+            email: "Неправильно введён адрес почты"
+          }
+        }
+      });
+    };
+    validateForms('#consultation-form');
+    validateForms('#consultation form');
+    validateForms('#order form');
+});
+
+
+
+ 

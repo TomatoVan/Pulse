@@ -2,6 +2,8 @@
     padding: 105px 0px 75px 0px;
     &__items{
         display: flex;
+        align-items: center;
+        justify-content: center;
         margin-top: 100px;
         &:nth-child(2){
             margin-top: 70px;
