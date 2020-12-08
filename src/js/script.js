@@ -105,10 +105,29 @@ $(document).ready(function(){
         }
       });
     };
-    validateForms('#consultation-form');
+    validateForms('#consultation-form'); /* тут мы использовали id,а в след. сначала id,а потом форму */
     validateForms('#consultation form');
     validateForms('#order form');
-});
+    
+    $('input[name=phone]').mask("+7(999) 999-99-99"); /* не работает когда включен type=number!!! */
+
+    $('form').submit(function (e) {
+      e.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "mailer/smart.php",
+        data: $(this).serialize()  /* this означает что будет работать с тем путем,с которым задали (form) */
+      }).done(function() {
+        $(this).find("input").val("");
+        $('#consultation, #order').fadeOut();
+        $('.overlay, #thanks').fadeIn('slow');
+
+        $('form').trigger('reset');
+      });
+      return false;
+    });
+
+  });
 
 
 
