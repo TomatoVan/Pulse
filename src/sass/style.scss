@@ -1,5 +1,6 @@
 @import 'base/variables';
 @import 'base/mixins';
+@import 'base/animations';
 * {
     font-family: 'MuseoSansCyrl', sans-serif;
 }
@@ -20,6 +21,8 @@
 @import 'reviews';
 @import 'footer';
 @import 'modal';
+@import 'pageup';
+
 
 
 @import'media';

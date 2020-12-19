@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  /* слайдер */
     $('.carousel__inner').slick({
         /* {
          infinite: true,
@@ -27,13 +28,13 @@ $(document).ready(function(){
             }
         ]
     });
-
+        /* табы  */
     $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
         $(this)
           .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
           .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
     });
-
+        /* товары  */
     function toggleSlide(item){
         $(item).each(function(i) {
             $(this).on('click',function(e) {
@@ -68,7 +69,7 @@ $(document).ready(function(){
     //})
 
 
-    //MODAL
+    //MODAL(всплыв. окна)
 
     $('[data-modal=consultation]').on('click',function(){
       $('.overlay, #consultation').fadeIn();
@@ -84,7 +85,7 @@ $(document).ready(function(){
         $('.overlay, #order').fadeIn();
       })
     });
-    
+      /* форма */
     function validateForms(form){
       $(form).validate({
         rules: {
@@ -110,7 +111,7 @@ $(document).ready(function(){
     validateForms('#order form');
     
     $('input[name=phone]').mask("+7(999) 999-99-99"); /* не работает когда включен type=number!!! */
-
+      /* отправка формы */
     $('form').submit(function (e) {
       e.preventDefault();
       $.ajax({
@@ -126,8 +127,22 @@ $(document).ready(function(){
       });
       return false;
     });
+      /* стрелка чтобы вернуться в начало */
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 1600) {
+        $('.pageup').fadeIn();
+      } else {
+        $('.pageup').fadeOut();
+      }
+    });
 
-  });
+    $("a[href^='#']").click(function(){
+      const _href = $(this).attr("href");
+      $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+      return false;
+    });
+
+});
 
 
 
