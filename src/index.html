@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +9,11 @@
     <script src="https://kit.fontawesome.com/723734bbd5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.min.css"> 
 </head>
 <body>
-    <section id="up" class="promo">
+    <div id="up" class="promo">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -53,9 +54,9 @@
                 
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="adv">
+    <div class="adv">
         <div class="container">
             <div class="title">НАШИ ПРЕИМУЩЕСТВА</div>
             <div class="adv__wrapper">
@@ -93,9 +94,9 @@
             </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="consultation">
+    <div class="consultation">
         <div class="container">
             <h2 class="title title_left">
                 Получите бесплатную консультацию<br>
@@ -115,9 +116,9 @@
                 <!-- <input type="reset"> --> <!-- для сброса введённых данных -->
             </form>
         </div>
-    </section>
+    </div>
 
-    <section class="carousel">
+    <div class="carousel">
         <div class="container">
             <div class="carousel__inner">
                 <div>
@@ -131,9 +132,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="catalog">
+    <div class="catalog">
         <div class="container">
             <h2 class="title">Каталог пульсометров</h2>
             <ul class="catalog__tabs">
@@ -374,13 +375,13 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="reviews">
+    <div class="reviews">
         <div class="container">
             <div class="title">отзывы клиентов</div>
             
-            <div class="reviews__items">
+            <div class="reviews__items fadeInUp wow">
                 <img src="img/reviews/1_p.png" alt="1" class="reviews__img">
                 <div class="reviews__Dwrapp">
                     <div class="reviews__subtitle">Ирина Иванченко</div>
@@ -393,7 +394,7 @@
                         Спасибо, RunSmart!</div>
                 </div>
             </div>
-            <div class="reviews__items">
+            <div class="reviews__items fadeInUp wow">
                 <img src="img/reviews/2_p.png" alt="2" class="reviews__img">
                 <div class="reviews__Dwrapp">
                     <div class="reviews__subtitle">Иван Сёмочкин</div>
@@ -404,7 +405,7 @@
                         С ними подготовился к своему первому полумарафону! Спасибо!!!</div>
                 </div>  
             </div>
-            <div class="reviews__items">
+            <div class="reviews__items fadeInUp wow">
                 <img src="img/reviews/3_p.png" alt="3" class="reviews__img">
                 <div class="reviews__Dwrapp">
                     <div class="reviews__subtitle">Юлия Дашкина</div>
@@ -417,11 +418,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <footer class="footer">
        <!--  <div class="footer__map"></div> -->
-       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1122.2192799753461!2d37.64603576763268!3d55.768254657390564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCAxMDcwNzg!5e0!3m2!1sru!2sru!4v1606496056366!5m2!1sru!2sru" width="100%" height="630" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1122.2192799753461!2d37.64603576763268!3d55.768254657390564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCAxMDcwNzg!5e0!3m2!1sru!2sru!4v1606496056366!5m2!1sru!2sru"  height="630"  style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         <div class="footer__info">
             <address class="footer__addr">Москва, Мясницкий проезд, д.3с1</address>
             <a class="footer__phone" href="tel:84999228974">8 (499) 922-89-74</a>
@@ -482,17 +483,12 @@
 
 
 
-
-
-
-
-
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script> <!-- https чтобы сайт работал также если просто включить индекс файл -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script> <!-- https чтобы сайт работал также если просто включить индекс файл -->
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/slick.min.js"> </script>
     <script src="js/jquery.validate.min.js  "></script>
     <script src="js/jquery.maskedinput.min.js" ></script>
+    <script src='js/wow.min.js'> </script>
     <script src="js/script.js"></script>
 </body>
 </html>
